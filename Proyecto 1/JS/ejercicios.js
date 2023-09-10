@@ -63,3 +63,4 @@ do{
     }
 }
 while(nota != undefined);
+
