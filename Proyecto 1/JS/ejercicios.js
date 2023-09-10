@@ -3,11 +3,10 @@ do{
 var edad = prompt("Introduce la edad")
 
 if (Number(edad) == edad) {
-    if(edad > 0 && edad <= 99){
+    if(edad >= 0 && edad <= 99){
         if (edad > 18) {
             alert("Usted puede conducir")
-        }
-    
+        }  
         else{
             alert("Usted no tiene edad para conducir")
         }
