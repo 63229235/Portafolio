@@ -21,3 +21,4 @@ var sumTotal = num1 + num2 + num3
 var media = sumTotal/3
 
 alert("La media de los tres numeros colocos son: " + media)
+
