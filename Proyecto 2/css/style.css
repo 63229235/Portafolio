@@ -1,2 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Young Serif', serif;
+}
+
+body{
+    min-height: 100hv;
+    background-color: #fff;
+    background-size: cover;
+    background-position: center;
+}
 /*Header*/
 
+.header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 1.3rem 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 100;
+}
+
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(182, 255, 231);
+    z-index: -1;
+}
+
+.header::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgb(182, 255, 231), rgb(86, 177, 147), rgb(182, 255, 231));
+    z-index: -1;
+}
+
+.logo{
+    font-size: 2rem;
+    color: #24ad7f;
+    text-decoration: none;
+    font-weight: 700;
+}
+
+.narvar a{
+    font-size: 1.15rem;
+    color: #24ad7f;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 2.5rem;
+}
+
+#check{
+    display: none;
+}
+
+.icons-header{
+    position: absolute;
+    right: 5%;
+    font-size: 2.8rem;
+    color: #24ad7f;
+    cursor: pointer;
+    display: none;
+}
+
+@media(max-width: 992px){
+    .header{
+        padding: 1.3rem 5%;
+    }
+}
+
+@media (max-width: 768px){
+    .icons-header{
+        display: inline-flex;
+    }
+
+    #check:checked~.icons-header #menu-icons{
+        display: none;
+    }
+
+    .icons-header #close-header{
+        display: none;
+    }
+
+    #check:checked~.icons-header #close-header{
+        display: block;
+    }
+
+    .narvar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        height: 0;
+        width: 100%;
+        background: rgb(193, 250, 231);
+        transition: .7s ease;
+        overflow: hidden;
+    }
+
+    #check:checked~.narvar{
+        height: 17.7rem;
+    }
+
+    .narvar a{
+        color: #24ad7f;
+        display: block;
+        margin: 1.2rem 0;
+        text-align: center;
+        font-size: 1.1rem;
+        transform: translateY(-50px);
+        opacity: 0;
+        transition: .7s ease;
+    }
+
+    #check:checked~.narvar a{
+        transform: translateY(0px);
+        opacity: 1;
+        transition-delay: calc(.20s * var(--i));
+    }
+}
